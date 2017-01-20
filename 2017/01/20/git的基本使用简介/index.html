@@ -15,7 +15,7 @@ git的配置12git config --global user.name &amp;quot;github的用户名&amp;quo
 <meta property="og:description" content="自从打算开通一个github账号之后，我这个技术小白就打算从最基本的git语句来学习使用。记录如下git在命令行下的操作，方便以后查看使用。
 git是否安装成功通过git –version或者git -v来查看版本号，如果能找到相关版本号说明安装成功。
 git的配置12git config --global user.name &amp;quot;github的用户名&amp;quot;git config --">
-<meta property="og:updated_time" content="2017-01-20T08:04:53.035Z">
+<meta property="og:updated_time" content="2017-01-20T08:10:27.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git的基本使用简介">
 <meta name="twitter:description" content="自从打算开通一个github账号之后，我这个技术小白就打算从最基本的git语句来学习使用。记录如下git在命令行下的操作，方便以后查看使用。
@@ -122,18 +122,18 @@ git的配置12git config --global user.name &amp;quot;github的用户名&amp;quo
 <li>把本地仓库的内容推送到远程仓库有3步：<ol>
 <li>git add .; git add -A（这里只是在暂存区）</li>
 <li>git commit -m”这里是用来写注释的”（这里只是在历史区）</li>
-<li>git push origin master(把我本地仓库的内容，推送到origin这个远程仓库的master分支上去)<h3 id="如何更新远程仓库："><a href="#如何更新远程仓库：" class="headerlink" title="如何更新远程仓库："></a>如何更新远程仓库：</h3></li>
-</ol>
-</li>
+<li>git push origin master(把我本地仓库的内容，推送到origin这个远程仓库的master分支上去)<h3 id="如何更新远程仓库"><a href="#如何更新远程仓库" class="headerlink" title="如何更新远程仓库"></a>如何更新远程仓库</h3></li>
 <li>找到了想要的远程仓库后，点击fork</li>
-<li>fork之后就自动到了自己的远程仓库，复制地址,使用git clone 地址<br> <code>git clone https://github.com/你自己的github的用户名/XXXXXXXX.git</code><ul>
+<li>fork之后就自动到了自己的远程仓库，复制地址,使用git clone 地址<br><code>git clone https://github.com/你自己的github的用户名/XXXXXXXX.git</code><ul>
 <li>git clone自动的让本地仓库和自己的远程仓库，添加了联系；</li>
 </ul>
 </li>
-<li>当别人远程仓库更新的时候，学生如果想更新自己的课件：<ol>
-<li>建立本地仓库跟别人远程仓库的联系：<br> 例： <code>git remote add teacher https://github.com/zhufengpeixun/Javascript201616.git</code></li>
+<li>当别人远程仓库更新的时候，自己如果想更新自己的课件：<ol>
+<li>建立本地仓库跟别人远程仓库的联系：<br>例： <code>git remote add teacher https://github.com/zhufengpeixun/Javascript201616.git</code></li>
 <li>远程更新：<code>git remote update teacher</code></li>
 <li>down到本地：<code>git pull teacher master</code></li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
