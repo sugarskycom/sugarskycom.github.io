@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>浅谈JavaScript中的预解释 | Hello，This is TeeLay Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="预解释什么是预解释，为何学预解释
+在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义
+带var的，只声明不定义； 带function，声明+定义；
+案例分析：12345678alert(n)    n=15;    function fn()&amp;#123;        alert(n)        n=34;    &amp;#125;    fn();    a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈JavaScript中的预解释">
+<meta property="og:url" content="http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/index.html">
+<meta property="og:site_name" content="Hello，This is TeeLay Blog">
+<meta property="og:description" content="预解释什么是预解释，为何学预解释
+在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义
+带var的，只声明不定义； 带function，声明+定义；
+案例分析：12345678alert(n)    n=15;    function fn()&amp;#123;        alert(n)        n=34;    &amp;#125;    fn();    a">
+<meta property="og:updated_time" content="2017-01-21T13:54:16.495Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="浅谈JavaScript中的预解释">
+<meta name="twitter:description" content="预解释什么是预解释，为何学预解释
+在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义
+带var的，只声明不定义； 带function，声明+定义；
+案例分析：12345678alert(n)    n=15;    function fn()&amp;#123;        alert(n)        n=34;    &amp;#125;    fn();    a">
+  
+    <link rel="alternate" href="/atom.xml" title="Hello，This is TeeLay Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hello，This is TeeLay Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">技术博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/About">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.sugarsky.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-浅谈JavaScript中的预解释" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/21/浅谈JavaScript中的预解释/" class="article-date">
+  <time datetime="2017-01-21T13:52:14.000Z" itemprop="datePublished">2017-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>►<a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      浅谈JavaScript中的预解释
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="预解释"><a href="#预解释" class="headerlink" title="预解释"></a>预解释</h2><h3 id="什么是预解释，为何学预解释"><a href="#什么是预解释，为何学预解释" class="headerlink" title="什么是预解释，为何学预解释"></a>什么是预解释，为何学预解释</h3><ul>
+<li>在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义</li>
+<li><p>带var的，只声明不定义； 带function，声明+定义；</p>
+<h3 id="案例分析："><a href="#案例分析：" class="headerlink" title="案例分析："></a>案例分析：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">alert(n)</div><div class="line">    n=15;</div><div class="line">    function fn()&#123;</div><div class="line">        alert(n)</div><div class="line">        n=34;</div><div class="line">    &#125;</div><div class="line">    fn();</div><div class="line">    alert(n);</div></pre></td></tr></table></figure>
+</li>
+<li><p>作用域链概念：当函数被调用的时候，会形成一个私有作用域；在这个作用中查找是否有私有变量n</p>
+<ul>
+<li>如果有,当前作用域下的所有n，都是私有变量，跟外界没有任何关系；</li>
+<li>如果没有，去上级作用域进行查找，没有，继续往上找，一直找到window还没有的话，报错！</li>
+</ul>
+</li>
+<li>上级作用域：上级作用域跟函数在哪里调用无关，只跟函数对应的堆内存在哪里开辟有关；</li>
+<li>带var 和 不带var的区别：<ul>
+<li>带var的：1）会进行预解释 2）如果在全局下赋值的话，属于window的全局属性</li>
+<li>不带var的：1）不会进行预解释 2）赋值的时候，属于window的全局属性；</li>
+</ul>
+</li>
+<li><p>内存和内存释放：</p>
+<ul>
+<li>内存：栈内存和堆内存<ul>
+<li>栈内存：提供了一个供JS代码执行的环境，包含：全局作用域和私有作用域</li>
+<li>堆内存：存放数据的；<ul>
+<li>对象数据类型：以键值对的形式存储</li>
+<li>函数数据类型：代码字符串</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>内存释放：</p>
+<ul>
+<li><p>栈内存释放：</p>
+<ul>
+<li>全局作用域的释放：因为全局作用域是在浏览器加载完页面的时候形成，所以，关系页面/关闭浏览器都可以释放</li>
+<li>私有作用域的释放：一般情况下，当函数执行完成的时候默认释放，有两种情况不释放：<ul>
+<li>不释放：当函数执行完成的时候，函数体内有东西被外面的变量或者其他东西占用；</li>
+<li>不立即释放：当函数执行完成的时候，会返回一个还需要执行的函数，等所有函数都执行完成，就一起释放了；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">    return 123</div><div class="line">&#125;</div><div class="line">fn()();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>堆内存释放：var a=xxff00; 释放：a=null;</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>函数被调用的时候，有四步：<ol>
+<li>形成一个私有作用域</li>
+<li>形参赋值</li>
+<li>预解释</li>
+<li>代码从上到下的执行；</li>
+</ol>
+</li>
+<li>预解释无节操：<ol>
+<li>只对等号左边带var,声明但不定义 var aa;</li>
+<li>已经声明过的变量，不会进行重复声明</li>
+<li>自执行函数不会进行预解释，只有执行到他的时候，声明+定义+调用，同步完成</li>
+<li>return后面的语句不会进行预解释，return下面的语句虽然不执行，但会进行预解释</li>
+<li>条件判断语句中，无论条件是否成立，都会进行预解释（IE10及10以下）</li>
+</ol>
+</li>
+<li>n++和++n的区别：<ul>
+<li>（++n）先++，再运算；</li>
+<li>（n++）先运算，再++；</li>
+</ul>
+</li>
+<li>私有变量有两种：1）形参  2）函数中带var的；</li>
+<li>this总结：<ul>
+<li>自执行函数中的this永远都是window</li>
+<li>当函数被调用的时候，点前面是谁，this就是谁？</li>
+<li>元素身上的事件被触发的时候，执行一个函数，函数中的this指向当前这个元素</li>
+<li>构造函数中的this都是实例；</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/" data-id="ciy7arbqa0006j0w5h1n35i9u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/21/MarkDown基本语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MarkDown基本语法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于生活/">关于生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JavaScript/">JavaScript</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MarkDown/">MarkDown</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/关于生活/">关于生活</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/关于生活/" style="font-size: 15px;">关于生活</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/21/浅谈JavaScript中的预解释/">浅谈JavaScript中的预解释</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/21/MarkDown基本语法/">MarkDown基本语法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/20/git的基本使用简介/">git的基本使用简介</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/20/开心，哈哈哈哈哈/">开心，哈哈哈哈哈</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/19/不开心/">不开心</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 唐天来<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/About" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
