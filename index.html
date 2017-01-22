@@ -1,574 +1,495 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  
-  <title>Hello，This is TeeLay Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="弄一个技术栈研究研究，前端小白">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello，This is TeeLay Blog">
-<meta property="og:url" content="http://www.sugarsky.cn/index.html">
-<meta property="og:site_name" content="Hello，This is TeeLay Blog">
-<meta property="og:description" content="弄一个技术栈研究研究，前端小白">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello，This is TeeLay Blog">
-<meta name="twitter:description" content="弄一个技术栈研究研究，前端小白">
-  
-    <link rel="alternate" href="/atom.xml" title="Hello，This is TeeLay Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="弄一个技术栈研究研究，前端小白">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://www.sugarsky.cn/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hello，This is TeeLay Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">技术博客</a>
-        </h2>
-      
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Hello，This is TeeLay Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                        <li>
+                            <a href="/About/">About</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.sugarsky.cn"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-浅谈JavaScript中的预解释" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/21/浅谈JavaScript中的预解释/" class="article-date">
-  <time datetime="2017-01-21T13:52:14.000Z" itemprop="datePublished">2017-01-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>►<a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/21/浅谈JavaScript中的预解释/">浅谈JavaScript中的预解释</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="预解释"><a href="#预解释" class="headerlink" title="预解释"></a>预解释</h2><h3 id="什么是预解释，为何学预解释"><a href="#什么是预解释，为何学预解释" class="headerlink" title="什么是预解释，为何学预解释"></a>什么是预解释，为何学预解释</h3><ul>
-<li>在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义</li>
-<li><p>带var的，只声明不定义； 带function，声明+定义；</p>
-<h3 id="案例分析："><a href="#案例分析：" class="headerlink" title="案例分析："></a>案例分析：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">alert(n)</div><div class="line">    n=15;</div><div class="line">    function fn()&#123;</div><div class="line">        alert(n)</div><div class="line">        n=34;</div><div class="line">    &#125;</div><div class="line">    fn();</div><div class="line">    alert(n);</div></pre></td></tr></table></figure>
-</li>
-<li><p>作用域链概念：当函数被调用的时候，会形成一个私有作用域；在这个作用中查找是否有私有变量n</p>
-<ul>
-<li>如果有,当前作用域下的所有n，都是私有变量，跟外界没有任何关系；</li>
-<li>如果没有，去上级作用域进行查找，没有，继续往上找，一直找到window还没有的话，报错！</li>
-</ul>
-</li>
-<li>上级作用域：上级作用域跟函数在哪里调用无关，只跟函数对应的堆内存在哪里开辟有关；</li>
-<li>带var 和 不带var的区别：<ul>
-<li>带var的：1）会进行预解释 2）如果在全局下赋值的话，属于window的全局属性</li>
-<li>不带var的：1）不会进行预解释 2）赋值的时候，属于window的全局属性；</li>
-</ul>
-</li>
-<li><p>内存和内存释放：</p>
-<ul>
-<li>内存：栈内存和堆内存<ul>
-<li>栈内存：提供了一个供JS代码执行的环境，包含：全局作用域和私有作用域</li>
-<li>堆内存：存放数据的；<ul>
-<li>对象数据类型：以键值对的形式存储</li>
-<li>函数数据类型：代码字符串</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>内存释放：</p>
-<ul>
-<li><p>栈内存释放：</p>
-<ul>
-<li>全局作用域的释放：因为全局作用域是在浏览器加载完页面的时候形成，所以，关系页面/关闭浏览器都可以释放</li>
-<li>私有作用域的释放：一般情况下，当函数执行完成的时候默认释放，有两种情况不释放：<ul>
-<li>不释放：当函数执行完成的时候，函数体内有东西被外面的变量或者其他东西占用；</li>
-<li>不立即释放：当函数执行完成的时候，会返回一个还需要执行的函数，等所有函数都执行完成，就一起释放了；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">    return 123</div><div class="line">&#125;</div><div class="line">fn()();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>堆内存释放：var a=xxff00; 释放：a=null;</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>函数被调用的时候，有四步：<ol>
-<li>形成一个私有作用域</li>
-<li>形参赋值</li>
-<li>预解释</li>
-<li>代码从上到下的执行；</li>
-</ol>
-</li>
-<li>预解释无节操：<ol>
-<li>只对等号左边带var,声明但不定义 var aa;</li>
-<li>已经声明过的变量，不会进行重复声明</li>
-<li>自执行函数不会进行预解释，只有执行到他的时候，声明+定义+调用，同步完成</li>
-<li>return后面的语句不会进行预解释，return下面的语句虽然不执行，但会进行预解释</li>
-<li>条件判断语句中，无论条件是否成立，都会进行预解释（IE10及10以下）</li>
-</ol>
-</li>
-<li>n++和++n的区别：<ul>
-<li>（++n）先++，再运算；</li>
-<li>（n++）先运算，再++；</li>
-</ul>
-</li>
-<li>私有变量有两种：1）形参  2）函数中带var的；</li>
-<li>this总结：<ul>
-<li>自执行函数中的this永远都是window</li>
-<li>当函数被调用的时候，点前面是谁，this就是谁？</li>
-<li>元素身上的事件被触发的时候，执行一个函数，函数中的this指向当前这个元素</li>
-<li>构造函数中的this都是实例；</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/" data-id="ciy8ccc6u000714w5lm34rkip" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-MarkDown基本语法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/21/MarkDown基本语法/" class="article-date">
-  <time datetime="2017-01-21T01:42:54.000Z" itemprop="datePublished">2017-01-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/MarkDown/">MarkDown</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/21/MarkDown基本语法/">MarkDown基本语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="编写Mark需要做的准备"><a href="#编写Mark需要做的准备" class="headerlink" title="编写Mark需要做的准备"></a>编写Mark需要做的准备</h2><ul>
-<li>打开File-settings-plugin;</li>
-<li>打开插件进行查找<br><img src="http://i1.piimg.com/4851/584f8eae8743f809.png" alt="plugin"></li>
-<li>重启webstrom(必须做的)</li>
-<li>重启webstrom之后，会在Editor-fileType-markdown<br><img src="http://i1.piimg.com/4851/6681c00fb43a5cb7.jpg" alt="fileType"></li>
-<li>在新建的文件有两种操作：<ul>
-<li>新建一个file文件，把文件名改为/.md$/的格式；（^开头，$结尾）</li>
-<li>new-&gt;Edit File Templates,添加文件类型和后缀名，如下图<br><img src="http://p1.bqimg.com/4851/23046abea2428912.png" alt="fileType"><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3>‘#’后加空格后家的内容代表一级标题，类等于Html中的H1<br>‘##’后加空格后家的内容代表二级标题，类等于Html中的H2<br>‘###’后加空格后家的内容代表三级标题，类等于Html中的H3<br>以此类推总共六级标题，注意必须在#后跟空格。<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3></li>
-</ul>
-</li>
-<li>有序列表：直接在文字前边加上相应的顺序数字即可。<strong>注意符号和文字之间都要加上一个字符的空格：</strong></li>
-<li>无序列表：在文字前边加上‘-’或者‘<em>’即可。<em>*注意符号和文字之间都要加上一个字符的空格：</em></em><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3>在文本前边加上键盘中的大括号（&gt;）即可。<h3 id="图片和链接"><a href="#图片和链接" class="headerlink" title="图片和链接"></a>图片和链接</h3>图片和链接的语法比较相似，但是引用图片比链接多了一个！。<br>因为语法关系，利用图片举例。请看下图：<br>！<a href="http://p1.bpimg.com/4851/b78f5f3dce520c65.png" target="_blank" rel="external">fileType</a><h3 id="粗体和斜体"><a href="#粗体和斜体" class="headerlink" title="粗体和斜体"></a>粗体和斜体</h3>在两个‘<em>*’中间的内容是粗体，而在一个‘</em>’之间的内容是斜体。<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3>分割线的语法只需要在内容下边加上三个‘<em>*</em>’即可。<h3 id="引入代码"><a href="#引入代码" class="headerlink" title="引入代码"></a>引入代码</h3>在代码段上一行和下一行各加上```即可。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/" data-id="ciy8ccc43000114w589d4u811" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MarkDown/">MarkDown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-git的基本使用简介" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/20/git的基本使用简介/" class="article-date">
-  <time datetime="2017-01-20T07:53:17.000Z" itemprop="datePublished">2017-01-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/Git/">Git</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/20/git的基本使用简介/">git的基本使用简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>自从打算开通一个github账号之后，我这个技术小白就打算从最基本的git语句来学习使用。记录如下git在命令行下的操作，方便以后查看使用。</p>
-<h3 id="git是否安装成功"><a href="#git是否安装成功" class="headerlink" title="git是否安装成功"></a>git是否安装成功</h3><p>通过git –version或者git -v来查看版本号，如果能找到相关版本号说明安装成功。</p>
-<h3 id="git的配置"><a href="#git的配置" class="headerlink" title="git的配置"></a>git的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;github的用户名&quot;</div><div class="line">git config --global user.email &quot;github的邮箱&quot;</div></pre></td></tr></table></figure>
-<h3 id="git的工作流"><a href="#git的工作流" class="headerlink" title="git的工作流"></a>git的工作流</h3><ol>
-<li>先创建一个本地的git仓库：</li>
-</ol>
-<ul>
-<li>创建一个文件夹</li>
-<li>把这个文件夹变成一个git可以管理的仓库 git init</li>
-</ul>
-<ol>
-<li>创建一个远程仓库：登录<a href="github.com">github的官网</a>;右上角有个+号来创建新的仓库</li>
-<li><p>给本地仓库添加一个远程通道；</p>
-<pre><code>- 添加远程通过`git remote add 通道名称`
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin https://github.com/leilei1238/test111111.git</div></pre></td></tr></table></figure>
-
-- 查看链接了哪些远程通`git remote -v`
-</code></pre></li>
-<li>把本地仓库的内容推送到远程仓库有3步：<ol>
-<li>git add .; git add -A（这里只是在暂存区）</li>
-<li>git commit -m”这里是用来写注释的”（这里只是在历史区）</li>
-<li>git push origin master(把我本地仓库的内容，推送到origin这个远程仓库的master分支上去)<h2 id="如何更新远程仓库"><a href="#如何更新远程仓库" class="headerlink" title="如何更新远程仓库"></a>如何更新远程仓库</h2></li>
-</ol>
-</li>
-<li>找到了想要的远程仓库后，点击fork</li>
-<li>fork之后就自动到了自己的远程仓库，复制地址,使用git clone 地址<br> <code>git clone https://github.com/你自己的github的用户名/XXXXXXXX.git</code><ul>
-<li>git clone自动的让本地仓库和自己的远程仓库，添加了联系；</li>
-</ul>
-</li>
-<li>当别人远程仓库更新的时候，自己如果想更新自己的课件：<ol>
-<li>建立本地仓库跟别人远程仓库的联系：<br>例：<br><code>git remote add teacher https://github.com/zhufengpeixun/Javascript201616.git</code></li>
-<li>远程更新：<code>git remote update teacher</code></li>
-<li>down到本地：<code>git pull teacher master</code></li>
-</ol>
-</li>
-</ol>
-<h3 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h3><ul>
-<li>git是否安装成功 git –version</li>
-<li>添加远程仓库 git remote add 通道名称（origin:自己远程 xxxx:别人远程）</li>
-<li>查看本地连接了哪些远程 git remote -v</li>
-<li>删除远程通道： git remote rm 通道名称</li>
-<li>把本地仓库内容推送到自己远程仓库<ol>
-<li>git add .</li>
-<li>git commit -m”注释”</li>
-<li>git push origin master</li>
-</ol>
-</li>
-<li>ls 查看当前文件夹下有哪些子文件；（有的电脑是dir）</li>
-<li>cd 文件夹名:进入某个文件夹</li>
-<li>创建一个文件夹：mkdir 文件夹名字</li>
-<li>创建多个文件：touch app.js index.html</li>
-<li>进入文件夹并创建文件可以合并：cd leilei &amp;&amp; touch app.js index.html;</li>
-<li>返回上一次 cd ..</li>
-<li>返回根目录 cd/</li>
-<li>git配置：<br>  <code>git config --global user.name &quot;github的用户名&quot;</code><br>  <code>git config --global user.email &quot;github的邮箱&quot;</code></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/20/git的基本使用简介/" data-id="ciy8ccc66000514w5tvrfv6pi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-开心，哈哈哈哈哈" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/20/开心，哈哈哈哈哈/" class="article-date">
-  <time datetime="2017-01-20T06:32:40.000Z" itemprop="datePublished">2017-01-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/关于生活/">关于生活</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/20/开心，哈哈哈哈哈/">开心，哈哈哈哈哈</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="自己研究了一上午，又是百度又是大眼瞪小眼的瞎折腾，终于把自己申请的域名和利用hexo和github搭建的博客绑定在了一起。"><a href="#自己研究了一上午，又是百度又是大眼瞪小眼的瞎折腾，终于把自己申请的域名和利用hexo和github搭建的博客绑定在了一起。" class="headerlink" title="自己研究了一上午，又是百度又是大眼瞪小眼的瞎折腾，终于把自己申请的域名和利用hexo和github搭建的博客绑定在了一起。"></a>自己研究了一上午，又是百度又是大眼瞪小眼的瞎折腾，终于把自己申请的域名和利用hexo和github搭建的博客绑定在了一起。</h3><h3 id="都说自己上了大学以后一直都是在听别人说编程的乐趣在于你自己编写的程序成功运行的一刹那是最开心的。今天终于体验到了这种感觉，很开心，哈哈哈。"><a href="#都说自己上了大学以后一直都是在听别人说编程的乐趣在于你自己编写的程序成功运行的一刹那是最开心的。今天终于体验到了这种感觉，很开心，哈哈哈。" class="headerlink" title="都说自己上了大学以后一直都是在听别人说编程的乐趣在于你自己编写的程序成功运行的一刹那是最开心的。今天终于体验到了这种感觉，很开心，哈哈哈。"></a>都说自己上了大学以后一直都是在听别人说编程的乐趣在于你自己编写的程序成功运行的一刹那是最开心的。今天终于体验到了这种感觉，很开心，哈哈哈。</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/20/开心，哈哈哈哈哈/" data-id="ciy8ccc4l000214w5o8vd8n6k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/关于生活/">关于生活</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-不开心" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/19/不开心/" class="article-date">
-  <time datetime="2017-01-19T04:41:12.000Z" itemprop="datePublished">2017-01-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/关于生活/">关于生活</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/19/不开心/">不开心</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="删除的东西删除不下去，不开心！！！"><a href="#删除的东西删除不下去，不开心！！！" class="headerlink" title="删除的东西删除不下去，不开心！！！"></a>删除的东西删除不下去，不开心！！！</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/19/不开心/" data-id="ciy8ccc6m000614w5wbtlkzfz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/关于生活/">关于生活</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-用Hexo-Github搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/19/用Hexo-Github搭建博客/" class="article-date">
-  <time datetime="2017-01-19T02:17:06.000Z" itemprop="datePublished">2017-01-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>►<a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/19/用Hexo-Github搭建博客/">用Hexo+Github搭建博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="用Hexo和GitHub搭建一个博客"><a href="#用Hexo和GitHub搭建一个博客" class="headerlink" title="用Hexo和GitHub搭建一个博客"></a>用Hexo和GitHub搭建一个博客</h3><ul>
-<li>npm install hexo -g</li>
-<li>你猜呢</li>
-<li>测试用的，哈哈哈哈哈</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/19/用Hexo-Github搭建博客/" data-id="ciy8ccc7v000a14w5erjnikpi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于生活/">关于生活</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MarkDown/">MarkDown</a><span class="category-list-count">1</span></li></ul></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/">MarkDown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/关于生活/">关于生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">3</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">6</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/01/21/浅谈JavaScript中的预解释/">浅谈JavaScript中的预解释</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/21/MarkDown基本语法/">MarkDown基本语法</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/20/git的基本使用简介/">git的基本使用简介</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/20/开心，哈哈哈哈哈/">开心，哈哈哈哈哈</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/19/不开心/">不开心</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 唐天来<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+    <!-- /.container -->
 </nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/undefined')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>Hello，This is TeeLay Blog</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">技术博客</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/2017/01/21/浅谈JavaScript中的预解释/">
+        <h2 class="post-title">
+            浅谈JavaScript中的预解释
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            预解释什么是预解释，为何学预解释
+在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义
+带var的，只声明不定义； 带function，声明+定义；
+案例分析：12345678alert(n)    n=15;    function fn()&#123;        alert(n)        n=34;    &#125;    fn();  ......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 唐天来 on
+        2017-01-21
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/01/21/MarkDown基本语法/">
+        <h2 class="post-title">
+            MarkDown基本语法
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            编写Mark需要做的准备
+打开File-settings-plugin;
+打开插件进行查找
+重启webstrom(必须做的)
+重启webstrom之后，会在Editor-fileType-markdown
+在新建的文件有两种操作：
+新建一个file文件，把文件名改为/.md$/的格式；（^开头，$结尾）
+new-&gt;Edit File Templates,添加文件类型和后缀名，如下图标题......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 唐天来 on
+        2017-01-21
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/01/20/git的基本使用简介/">
+        <h2 class="post-title">
+            git的基本使用简介
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            自从打算开通一个github账号之后，我这个技术小白就打算从最基本的git语句来学习使用。记录如下git在命令行下的操作，方便以后查看使用。
+git是否安装成功通过git –version或者git -v来查看版本号，如果能找到相关版本号说明安装成功。
+git的配置12git config --global user.name &quot;github的用户名&quot;git config......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 唐天来 on
+        2017-01-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/01/20/开心，哈哈哈哈哈/">
+        <h2 class="post-title">
+            开心，哈哈哈哈哈
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            自己研究了一上午，又是百度又是大眼瞪小眼的瞎折腾，终于把自己申请的域名和利用hexo和github搭建的博客绑定在了一起。都说自己上了大学以后一直都是在听别人说编程的乐趣在于你自己编写的程序成功运行的一刹那是最开心的。今天终于体验到了这种感觉，很开心，哈哈哈。...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 唐天来 on
+        2017-01-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/01/19/不开心/">
+        <h2 class="post-title">
+            不开心
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            删除的东西删除不下去，不开心！！！...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 唐天来 on
+        2017-01-19
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/01/19/用Hexo-Github搭建博客/">
+        <h2 class="post-title">
+            用Hexo+Github搭建博客
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            用Hexo和GitHub搭建一个博客
+npm install hexo -g
+你猜呢
+测试用的，哈哈哈哈哈
+
+...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 唐天来 on
+        2017-01-19
+    </p>
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+    
+</ul>
 
 
 
+                <!-- 如果开启评论功能 -->
+                
 
-  </div>
+            </div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
+                    <div class="short-about">
+
+                        
+
+                        
+
+                        <!-- SNS Link -->
+                        <ul class="list-inline">
+                            
+                            
+                            
+
+                            
+
+                            
+
+                            
+                            
+                            
+                            
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Friends Blog -->
+                
+            </div>
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Hello，This is TeeLay Blog 2017 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://www.sugarsky.cn/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://www.sugarsky.cn/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
 </body>
+
 </html>
