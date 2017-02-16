@@ -1,49 +1,77 @@
-extends base
-
-block title
-  title= page.title + ' | ' + config.title
-
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format('ll')
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-    if theme.duoshuo
-      a.ds-thread-count(data-thread-key=page.path, href=url_for(page.path) + '#comments')
-    if theme.disqus
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if page.toc
-      div(class='clear')
-        div(id='toc' class='toc-article')
-          div(class='toc-title')= __('contents')
-          != toc(page.content)
-    .post-content
-      != page.content
-    include _partial/tag
-    include _partial/post_nav
-    if theme.duoshuo
-      div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
-         .ds-share-inline
-            ul.ds-share-icons-16
-              li(data-toggle='ds-share-icons-more')
-                a(href='javascript:void(0);').ds-more= __('shareto')
-                  | :
-              li
-                a(href='javascript:void(0);' data-service='weibo').ds-weibo 微博
-              li
-                a(href='javascript:void(0);' data-service='qzone').ds-qzone QQ空间
-              li
-                a(href='javascript:void(0);' data-service='qqt').ds-qqt 腾讯微博
-              li
-                a(href='javascript:void(0);' data-service='wechat').ds-wechat 微信
-            .ds-share-icons-more
-    include _partial/comments
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="但行好事，莫问前程。"><title>浅谈JavaScript中的预解释 | Hello，This is TeeLay Blog</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.2.0"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=1.2.0"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">浅谈JavaScript中的预解释</h1><a id="logo" href="/.">Hello，This is TeeLay Blog</a><p class="description">技术博客</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">浅谈JavaScript中的预解释</h1><div class="post-meta">Jan 21, 2017<span> | </span><span class="category"><a href="/categories/前端/">前端</a><a href="/categories/前端/JavaScript/">JavaScript</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="预解释"><a href="#预解释" class="headerlink" title="预解释"></a>预解释</h2><h3 id="什么是预解释，为何学预解释"><a href="#什么是预解释，为何学预解释" class="headerlink" title="什么是预解释，为何学预解释"></a>什么是预解释，为何学预解释</h3><ul>
+<li>在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义</li>
+<li><p>带var的，只声明不定义； 带function，声明+定义；</p>
+<h3 id="案例分析："><a href="#案例分析：" class="headerlink" title="案例分析："></a>案例分析：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">alert(n)</div><div class="line">    n=15;</div><div class="line">    function fn()&#123;</div><div class="line">        alert(n)</div><div class="line">        n=34;</div><div class="line">    &#125;</div><div class="line">    fn();</div><div class="line">    alert(n);</div></pre></td></tr></table></figure>
+</li>
+<li><p>作用域链概念：当函数被调用的时候，会形成一个私有作用域；在这个作用中查找是否有私有变量n</p>
+<ul>
+<li>如果有,当前作用域下的所有n，都是私有变量，跟外界没有任何关系；</li>
+<li>如果没有，去上级作用域进行查找，没有，继续往上找，一直找到window还没有的话，报错！</li>
+</ul>
+</li>
+<li>上级作用域：上级作用域跟函数在哪里调用无关，只跟函数对应的堆内存在哪里开辟有关；</li>
+<li>带var 和 不带var的区别：<ul>
+<li>带var的：1）会进行预解释 2）如果在全局下赋值的话，属于window的全局属性</li>
+<li>不带var的：1）不会进行预解释 2）赋值的时候，属于window的全局属性；</li>
+</ul>
+</li>
+<li><p>内存和内存释放：</p>
+<ul>
+<li>内存：栈内存和堆内存<ul>
+<li>栈内存：提供了一个供JS代码执行的环境，包含：全局作用域和私有作用域</li>
+<li>堆内存：存放数据的；<ul>
+<li>对象数据类型：以键值对的形式存储</li>
+<li>函数数据类型：代码字符串</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>内存释放：</p>
+<ul>
+<li><p>栈内存释放：</p>
+<ul>
+<li>全局作用域的释放：因为全局作用域是在浏览器加载完页面的时候形成，所以，关系页面/关闭浏览器都可以释放</li>
+<li>私有作用域的释放：一般情况下，当函数执行完成的时候默认释放，有两种情况不释放：<ul>
+<li>不释放：当函数执行完成的时候，函数体内有东西被外面的变量或者其他东西占用；</li>
+<li>不立即释放：当函数执行完成的时候，会返回一个还需要执行的函数，等所有函数都执行完成，就一起释放了；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">    return 123</div><div class="line">&#125;</div><div class="line">fn()();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>堆内存释放：var a=xxff00; 释放：a=null;</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>函数被调用的时候，有四步：<ol>
+<li>形成一个私有作用域</li>
+<li>形参赋值</li>
+<li>预解释</li>
+<li>代码从上到下的执行；</li>
+</ol>
+</li>
+<li>预解释无节操：<ol>
+<li>只对等号左边带var,声明但不定义 var aa;</li>
+<li>已经声明过的变量，不会进行重复声明</li>
+<li>自执行函数不会进行预解释，只有执行到他的时候，声明+定义+调用，同步完成</li>
+<li>return后面的语句不会进行预解释，return下面的语句虽然不执行，但会进行预解释</li>
+<li>条件判断语句中，无论条件是否成立，都会进行预解释（IE10及10以下）</li>
+</ol>
+</li>
+<li>n++和++n的区别：<ul>
+<li>（++n）先++，再运算；</li>
+<li>（n++）先运算，再++；</li>
+</ul>
+</li>
+<li>私有变量有两种：1）形参  2）函数中带var的；</li>
+<li>this总结：<ul>
+<li>自执行函数中的this永远都是window</li>
+<li>当函数被调用的时候，点前面是谁，this就是谁？</li>
+<li>元素身上的事件被触发的时候，执行一个函数，函数中的this指向当前这个元素</li>
+<li>构造函数中的this都是实例；</li>
+</ul>
+</li>
+</ul>
+</div><div class="tags"><a href="/tags/前端/">前端</a><a href="/tags/JavaScript/">JavaScript</a></div><div class="post-nav"><a href="/2017/01/21/MarkDown基本语法/" class="next">MarkDown基本语法</a></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="widget"><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="请输入关键字..."/></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-gui"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于生活/">关于生活</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MarkDown/">MarkDown</a><span class="category-list-count">1</span></li></ul></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/MarkDown/" style="font-size: 15px;">MarkDown</a> <a href="/tags/关于生活/" style="font-size: 15px;">关于生活</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/前端/" style="font-size: 15px;">前端</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-fei"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/21/浅谈JavaScript中的预解释/">浅谈JavaScript中的预解释</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/21/MarkDown基本语法/">MarkDown基本语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/git的基本使用简介/">git的基本使用简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/开心，哈哈哈哈哈/">开心，哈哈哈哈哈</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/19/不开心/">不开心</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/19/用Hexo-Github搭建博客/">用Hexo+Github搭建博客</a></li></ul></div></div></div></div><a id="totop" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.2.0" async></script><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">网站地图</a> |<a href="/atom.xml">订阅本站</a> |<span>联系博主：<a href="mailto:null" target="_blank" class="fa fa-email"> </a><a href="null" target="_blank" class="fa fa-weibo"></a><a href="null" target="_blank" class="fa fa-github"> </a></span></p><p><span> Copyright &copy;<a href="/." rel="nofollow">唐天来</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span><span><a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> Theme </a>by<a rel="nofollow" target="_blank" href="https://github.com/chaooo"> Charles.</a></span></p></div></div></div><script type="text/javascript" src="/js/search.json.js?v=1.2.0"></script></body></html>
