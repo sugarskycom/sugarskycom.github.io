@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sugarsky.cn/"/>
-  <updated>2017-03-09T13:45:32.201Z</updated>
+  <updated>2017-03-22T09:29:39.374Z</updated>
   <id>http://www.sugarsky.cn/</id>
   
   <author>
@@ -14,6 +14,143 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebStorm快捷键总结</title>
+    <link href="http://www.sugarsky.cn/2017/03/22/WebStorm%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.sugarsky.cn/2017/03/22/WebStorm快捷键总结/</id>
+    <published>2017-03-22T09:23:10.000Z</published>
+    <updated>2017-03-22T09:29:39.374Z</updated>
+    
+    <content type="html"><![CDATA[<p>正所谓工欲善其事必先利其器，之前在WebStorm中每每遇到代码量重复的内容的时候，都要使用“CV大法”，这次特地总结了WebStorm基本的快捷键，能够让编写代码来更加得心应手。</p>
+<ul>
+<li>Ctrl+Shift+a:快速查找使用编辑器所有功能</li>
+</ul>
+<ol>
+<li>左侧栏目录显影：Ctrl+Shift+F12</li>
+<li>文件模板配置：File》Settings》Editor&gt;File and Code Templbtes<br>settings:Ctrl+Alt+S</li>
+<li>将当前文件加入收藏夹：Alt+Shift+F</li>
+<li>收藏夹显影：Alt+2</li>
+<li>切换代码选项卡：Alt+&lt;-/-&gt;</li>
+<li>关闭当前代码选项卡：Ctrl+F4</li>
+<li>Ctrl+X：剪切行</li>
+<li>快注釋：Ctrl+shift+/</li>
+<li>單行注釋：Ctrl+/</li>
+<li>複製當前行：Ctrl+D</li>
+<li>跳到變量申明處：Ctrl+B</li>
+<li>顯示function的詳細信息：Ctrl+Shift+i</li>
+<li>Ctrl+W:選中單詞</li>
+<li>以單詞作為邊界跳光標位置：Ctrl+&lt;-/-&gt;</li>
+<li>新建一個文件或其他:Alt+Insert</li>
+<li>格式化工具：Ctrl+Alt+L（該版本不存在）</li>
+<li>減少/擴大縮進:shift+tab/tab</li>
+<li>刪除一行：Ctrl+Y</li>
+<li>顯示默認值：Ctrl+p</li>
+<li>大小寫轉換：Ctrl+shift+U</li>
+<li>添加標籤：Ctrl+F11</li>
+<li>重新開始一行（無論光標在哪一個位置）：shift+enter</li>
+<li>通過文件名快速查找工程內的文件：Ctrl+Shift+N</li>
+<li>通過一個字符快速查找位置：Ctrl+Shift+Alt+N</li>
+<li>在文件內快速查找代碼：Ctrl+F</li>
+<li>查找下一個：F3</li>
+<li>查找上一個：Shift+F3</li>
+<li>文件內代碼替換：Ctrl+R</li>
+<li>指定目錄內代碼批量替換：Ctrl+shift+R</li>
+<li>指定目錄內代碼批量查找：Ctrl+Shift+F</li>
+<li>到指定行的代碼：Ctrl+G</li>
+<li>光標到代碼塊的前面或後面：Ctrl+[/]</li>
+<li>上一個/下一個方法：Alt+up/down</li>
+<li>高亮显示所选文本：Ctrl+Shift+F7</li>
+<li>打开最近打开的文件：Ctrl+E</li>
+<li>查找代码所在的位置：Alt+F1</li>
+<li>拷贝文件路径：Ctrl+Shift+c</li>
+<li>撤销：Ctrl+Z</li>
+<li>取消撤销操作：Ctrl+Shift+z</li>
+<li>在当前行的前面插入一行：Ctrl+Alt+Enter</li>
+<li>透明化所有窗口，快速查看桌面:Window+” “</li>
+<li>使当前使用的窗口最大化：Window+“向上箭头”</li>
+<li>使当前使用中的窗口贴向屏幕左侧：Window+”向左的箭头”</li>
+<li>跨显示器右移窗口：Windows+Shift+”向右的箭头”</li>
+<li>突出显示当前窗口，最小化其他的非当前使用中的窗口：Windows+Home</li>
+<li>最小化所有窗口：Windows+d</li>
+</ol>
+<ul>
+<li>html:</li>
+</ul>
+<ol>
+<li>html5结构：html:5 按下tab</li>
+<li>引入CSS:link:css 按下tab键</li>
+<li>引入js : script：src 按下tab键</li>
+<li>ul及li:ul+ 按下tab键</li>
+<li><a href="http://" target="_blank" rel="external"></a>:a:link 按下tab键</li>
+<li><a href="mailto"></a>:a:mail 按下tab键</li>
+<li>get表单：form:get 按下tab键</li>
+<li>hidden输入框：input:hidden 按下tab键</li>
+<li>id:name ： div#name 按下tab键</li>
+<li>class:name : div.name 按下tab键</li>
+<li>class:one,two : div.one.two 按下tab键</li>
+<li>生成一个包含link的head : head&gt;link:css</li>
+<li>两个p : p+P</li>
+<li>3个p : p<em>3<br>60: 创建ul下有个li同时class分别为item1,item2.。。。。:ul&gt;li.item$</em>6</li>
+</ol>
+<ul>
+<li>css</li>
+</ul>
+<ol>
+<li>position : pos/pos:s|a|r|f 按下tab键</li>
+<li>top : t/t:a</li>
+<li>rigth : r/r:a</li>
+<li>left : l</li>
+<li>bottom : b</li>
+<li>z-index : z</li>
+<li>float : fl</li>
+<li>clear : cl</li>
+<li>display ：d/d:n/d:b/d:i/d:ib</li>
+<li>visibility:v<br>71: overflow:ov<br>72: zoom:1 : zoo<br>73: lip : cp<br>74: box-sizing:bx</li>
+<li>-webkit-box-shadow:0 0 0 #000 ：bxsh:w</li>
+</ol>
+<ol>
+<li>显示当前文件的结构：Ctrl+f12</li>
+<li>当前行向上/下移动：Ctrl+shift+”向上箭头”/“向下接口”</li>
+<li>块移动：shift+alt+”向上箭头/向下箭头”</li>
+<li>ctrl+”+/-“:可以折叠项目中的任何代码块，它不是选中折叠，而是自动识别折叠</li>
+<li>shift+F6:文件重命名</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;正所谓工欲善其事必先利其器，之前在WebStorm中每每遇到代码量重复的内容的时候，都要使用“CV大法”，这次特地总结了WebStorm基本的快捷键，能够让编写代码来更加得心应手。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ctrl+Shift+a:快速查找使用编辑器所有功能&lt;/li&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.sugarsky.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="WebStorm" scheme="http://www.sugarsky.cn/categories/%E6%8A%80%E6%9C%AF/WebStorm/"/>
+    
+    
+      <category term="技术" scheme="http://www.sugarsky.cn/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="WebStorm" scheme="http://www.sugarsky.cn/tags/WebStorm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则入门</title>
+    <link href="http://www.sugarsky.cn/2017/03/10/%E6%AD%A3%E5%88%99%E5%85%A5%E9%97%A8/"/>
+    <id>http://www.sugarsky.cn/2017/03/10/正则入门/</id>
+    <published>2017-03-10T09:04:40.000Z</published>
+    <updated>2017-03-10T09:04:40.154Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>&#39;最近的心情&#39;</title>
@@ -135,9 +272,9 @@
       <category term="JavaScript" scheme="http://www.sugarsky.cn/categories/%E5%89%8D%E7%AB%AF/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="http://www.sugarsky.cn/tags/JavaScript/"/>
-    
       <category term="前端" scheme="http://www.sugarsky.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://www.sugarsky.cn/tags/JavaScript/"/>
     
   </entry>
   
