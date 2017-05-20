@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>浅谈JavaScript中的预解释 | Hello，This is TeeLay Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="预解释什么是预解释，为何学预解释 在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义 带var的，只声明不定义； 带function，声明+定义； 案例分析：12345678alert(n)    n=15;    function fn()&amp;#123;        alert(n)        n=34;    &amp;#125;    fn();    a">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>浅谈JavaScript中的预解释 | Hello，This is TeeLay Blog | 但行好事，莫问前程。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,前端">
+    <meta name="description" content="预解释什么是预解释，为何学预解释 在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义 带var的，只声明不定义； 带function，声明+定义； 案例分析：12345678alert(n)    n=15;    function fn()&amp;#123;        alert(n)        n=34;    &amp;#125;    fn();    a">
 <meta name="keywords" content="JavaScript,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈JavaScript中的预解释">
@@ -16,81 +31,171 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈JavaScript中的预解释">
 <meta name="twitter:description" content="预解释什么是预解释，为何学预解释 在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义 带var的，只声明不定义； 带function，声明+定义； 案例分析：12345678alert(n)    n=15;    function fn()&amp;#123;        alert(n)        n=34;    &amp;#125;    fn();    a">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    
+        <link rel="alternate" type="application/atom+xml" title="Hello，This is TeeLay Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hello，This is TeeLay Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">但行好事，莫问前程。</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.sugarsky.cn"></form>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">唐天来</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
       </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-浅谈JavaScript中的预解释" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/21/浅谈JavaScript中的预解释/" class="article-date">
-  <time datetime="2017-01-21T13:52:14.000Z" itemprop="datePublished">2017-01-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>►<a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
-  
-    <h1 class="article-title" itemprop="name">
-      浅谈JavaScript中的预解释
-    </h1>
-  
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
 
-      </header>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">浅谈JavaScript中的预解释</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">浅谈JavaScript中的预解释</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-21T13:52:14.000Z" itemprop="datePublished" class="page-time">
+  2017-01-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/JavaScript/">JavaScript</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="预解释"><a href="#预解释" class="headerlink" title="预解释"></a>预解释</h2><h3 id="什么是预解释，为何学预解释"><a href="#什么是预解释，为何学预解释" class="headerlink" title="什么是预解释，为何学预解释"></a>什么是预解释，为何学预解释</h3><ul>
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#预解释"><span class="post-toc-number">1.</span> <span class="post-toc-text">预解释</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是预解释，为何学预解释"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是预解释，为何学预解释</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#案例分析："><span class="post-toc-number">1.2.</span> <span class="post-toc-text">案例分析：</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-浅谈JavaScript中的预解释"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">浅谈JavaScript中的预解释</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-01-21 21:52:14" datetime="2017-01-21T13:52:14.000Z"  itemprop="datePublished">2017-01-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/JavaScript/">JavaScript</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="预解释"><a href="#预解释" class="headerlink" title="预解释"></a>预解释</h2><h3 id="什么是预解释，为何学预解释"><a href="#什么是预解释，为何学预解释" class="headerlink" title="什么是预解释，为何学预解释"></a>什么是预解释，为何学预解释</h3><ul>
 <li>在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义</li>
 <li><p>带var的，只声明不定义； 带function，声明+定义；</p>
 <h3 id="案例分析："><a href="#案例分析：" class="headerlink" title="案例分析："></a>案例分析：</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">alert(<span class="built_in">n</span>)</div><div class="line">    <span class="built_in">n</span>=<span class="number">15</span>;</div><div class="line">    function fn()&#123;</div><div class="line">        alert(<span class="built_in">n</span>)</div><div class="line">        <span class="built_in">n</span>=<span class="number">34</span>;</div><div class="line">    &#125;</div><div class="line">    fn();</div><div class="line">    alert(<span class="built_in">n</span>);</div></pre></td></tr></table></figure>
@@ -167,141 +272,297 @@
 </li>
 </ul>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/" data-id="cj2g0ejf0001500haeo42twxl" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+        </div>
 
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-21T13:54:16.495Z" itemprop="dateUpdated">2017-01-21 21:54:16</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/01/21/浅谈JavaScript中的预解释/" target="_blank" rel="external">http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.sugarsky.cn">
+            <img src="/img/avatar.jpg" alt="唐天来">
+            唐天来
+        </a>
     </footer>
-  </div>
-  
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
-<nav id="article-nav">
-  
-    <a href="/2017/02/17/最近的心情/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          &#39;最近的心情&#39;
-        
-      </div>
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/&title=《浅谈JavaScript中的预解释》 — Hello，This is TeeLay Blog&pic=http://www.sugarsky.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/&title=《浅谈JavaScript中的预解释》 — Hello，This is TeeLay Blog&source=天来的秘密花园" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浅谈JavaScript中的预解释》 — Hello，This is TeeLay Blog&url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/&via=http://www.sugarsky.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
     </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
   
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/02/17/最近的心情/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">&#39;最近的心情&#39;</h4>
+      </a>
+    </div>
   
-    <a href="/2017/01/21/MarkDown基本语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MarkDown基本语法</div>
-    </a>
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/21/MarkDown基本语法/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">MarkDown基本语法</h4>
+      </a>
+    </div>
   
 </nav>
 
-  
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
-</section>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
         
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于生活/">关于生活</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MarkDown/">MarkDown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/WebStorm/">WebStorm</a><span class="category-list-count">1</span></li></ul></li></ul>
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/">MarkDown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WebStorm/">WebStorm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/关于生活/">关于生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li></ul>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>唐天来 &copy; 2015 - 2017</span>
+        </p>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">6</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/03/22/WebStorm快捷键总结/">WebStorm快捷键总结</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/10/正则入门/">正则入门</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/17/最近的心情/">&#39;最近的心情&#39;</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/21/浅谈JavaScript中的预解释/">浅谈JavaScript中的预解释</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/21/MarkDown基本语法/">MarkDown基本语法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 唐天来<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
 
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/&title=《浅谈JavaScript中的预解释》 — Hello，This is TeeLay Blog&pic=http://www.sugarsky.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/&title=《浅谈JavaScript中的预解释》 — Hello，This is TeeLay Blog&source=天来的秘密花园" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浅谈JavaScript中的预解释》 — Hello，This is TeeLay Blog&url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/&via=http://www.sugarsky.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.sugarsky.cn/2017/01/21/浅谈JavaScript中的预解释/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-  </div>
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3aQW7DMAwEwPz/0+k1RSpnSUqpD+NT0Ka2RgUkecnHI76eL9f7z1ffX93h9bfPy+v66dsuPDw8vMHQew94/+auCZpMCh4eHt5pXj7o6yHmA0r+NvmrDxY8PDy8G/Cuh5UfqfNBV7cfPDw8vLvxehtG8vPJs/Dw8PC+z8uX7OqCnoQR1aEfyVrw8PDwYl5eRbrP5yP1PTw8PLxxVf16wc23kGR7mGwDy9Hi4eHhHeD1DsQ98KShqjopeHh4eOd4eeEqCUyToU+ChiTU+PUZDw8P7wAvufWuCDW/W7IZFKJbPDw8vAO8vEDVW+J7uWtvapZPxMPDw9vKy+egN9wcM4l9RzkKHh4e3qAhoHe0rd5hEt0mT8TDw8P7Dq+3xibH6+oUJIf7aBPCw8PDO8DLC129AlX+nd4kNrNqPDw8vE283vbQK/zPk4RkJHh4eHjneJMFN2nS6oHnsQgeHh7eCV71tb8aqk4W9DyYGHVD4OHh4Q3e0ydlqvlwqw0H1aYHPDw8vBO8XaWsSVBbbSMo3xMPDw9vK6/a5DQ54CZbSLUkFjVg4eHh4Y1586J7HjH0WqmqW9djcms8PDy8+B0/ObCebhSY9zUsNyc8PDy8Y7xRhhEEENUusGpAPNpJ8PDw8Iq8PIyYx6+9QVdD4WbWgoeHhxfzdi3lVWTe2Fr4L/Uej4eHh9fiVY/Ik1JWbyKqFx4eHt5/8ebF/mr4OynOLd8V8PDw8DbxmkttMYrNh77rMP1H0xUeHh7eJt6kMN+bmmor6q5ABA8PD28vrzqsSVKabDnVMtiHEeLh4eEd41XDiHwpr7ZYzTcwPDw8vDvzesFEtY2gt9rj4eHh3Yc3j2J7cXD+AoCHh4f3HV5efOq1F1SP3dXAYvlNPDw8vAO86kt+b8NIjua9uGFDkIGHh4eX8n4An2WHXJC7YewAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
 </body>
 </html>

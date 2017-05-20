@@ -1,104 +1,221 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>MarkDown基本语法 | Hello，This is TeeLay Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编写Mark需要做的准备 打开File-settings-plugin; 打开插件进行查找 重启webstrom(必须做的) 重启webstrom之后，会在Editor-fileType-markdown 在新建的文件有两种操作： 新建一个file文件，把文件名改为/.md$/的格式；（^开头，$结尾） new-&amp;gt;Edit File Templates,添加文件类型和后缀名，如下图标题‘#’">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>MarkDown基本语法 | Hello，This is TeeLay Blog | 但行好事，莫问前程。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="技术,MarkDown">
+    <meta name="description" content="编写Mark需要做的准备 打开File-settings-plugin; 打开插件进行查找                                                                                             plugin              重启webstrom(必须做的) 重启webstrom之后，会在Editor-fil">
 <meta name="keywords" content="技术,MarkDown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MarkDown基本语法">
 <meta property="og:url" content="http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/index.html">
 <meta property="og:site_name" content="Hello，This is TeeLay Blog">
-<meta property="og:description" content="编写Mark需要做的准备 打开File-settings-plugin; 打开插件进行查找 重启webstrom(必须做的) 重启webstrom之后，会在Editor-fileType-markdown 在新建的文件有两种操作： 新建一个file文件，把文件名改为/.md$/的格式；（^开头，$结尾） new-&amp;gt;Edit File Templates,添加文件类型和后缀名，如下图标题‘#’">
+<meta property="og:description" content="编写Mark需要做的准备 打开File-settings-plugin; 打开插件进行查找                                                                                             plugin              重启webstrom(必须做的) 重启webstrom之后，会在Editor-fil">
 <meta property="og:image" content="http://i1.piimg.com/4851/584f8eae8743f809.png">
 <meta property="og:image" content="http://i1.piimg.com/4851/6681c00fb43a5cb7.jpg">
 <meta property="og:image" content="http://p1.bqimg.com/4851/23046abea2428912.png">
 <meta property="og:updated_time" content="2017-02-12T08:55:42.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MarkDown基本语法">
-<meta name="twitter:description" content="编写Mark需要做的准备 打开File-settings-plugin; 打开插件进行查找 重启webstrom(必须做的) 重启webstrom之后，会在Editor-fileType-markdown 在新建的文件有两种操作： 新建一个file文件，把文件名改为/.md$/的格式；（^开头，$结尾） new-&amp;gt;Edit File Templates,添加文件类型和后缀名，如下图标题‘#’">
+<meta name="twitter:description" content="编写Mark需要做的准备 打开File-settings-plugin; 打开插件进行查找                                                                                             plugin              重启webstrom(必须做的) 重启webstrom之后，会在Editor-fil">
 <meta name="twitter:image" content="http://i1.piimg.com/4851/584f8eae8743f809.png">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    
+        <link rel="alternate" type="application/atom+xml" title="Hello，This is TeeLay Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hello，This is TeeLay Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">但行好事，莫问前程。</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.sugarsky.cn"></form>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">唐天来</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
       </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-MarkDown基本语法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/21/MarkDown基本语法/" class="article-date">
-  <time datetime="2017-01-21T01:42:54.000Z" itemprop="datePublished">2017-01-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/MarkDown/">MarkDown</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
-  
-    <h1 class="article-title" itemprop="name">
-      MarkDown基本语法
-    </h1>
-  
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
 
-      </header>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">MarkDown基本语法</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">MarkDown基本语法</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-21T01:42:54.000Z" itemprop="datePublished" class="page-time">
+  2017-01-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/MarkDown/">MarkDown</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="编写Mark需要做的准备"><a href="#编写Mark需要做的准备" class="headerlink" title="编写Mark需要做的准备"></a>编写Mark需要做的准备</h2><ul>
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编写Mark需要做的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">编写Mark需要做的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#标题"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">标题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列表"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">列表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引用"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">引用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图片和链接"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">图片和链接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#粗体和斜体"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">粗体和斜体</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分割线"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">分割线</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引入代码"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">引入代码</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-MarkDown基本语法"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">MarkDown基本语法</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-01-21 09:42:54" datetime="2017-01-21T01:42:54.000Z"  itemprop="datePublished">2017-01-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/MarkDown/">MarkDown</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="编写Mark需要做的准备"><a href="#编写Mark需要做的准备" class="headerlink" title="编写Mark需要做的准备"></a>编写Mark需要做的准备</h2><ul>
 <li>打开File-settings-plugin;</li>
-<li>打开插件进行查找<br><img src="http://i1.piimg.com/4851/584f8eae8743f809.png" alt="plugin"></li>
+<li>打开插件进行查找<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i1.piimg.com/4851/584f8eae8743f809.png" alt="plugin" title="">
+                </div>
+                <div class="image-caption">plugin</div>
+            </figure></li>
 <li>重启webstrom(必须做的)</li>
-<li>重启webstrom之后，会在Editor-fileType-markdown<br><img src="http://i1.piimg.com/4851/6681c00fb43a5cb7.jpg" alt="fileType"></li>
+<li>重启webstrom之后，会在Editor-fileType-markdown<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i1.piimg.com/4851/6681c00fb43a5cb7.jpg" alt="fileType" title="">
+                </div>
+                <div class="image-caption">fileType</div>
+            </figure></li>
 <li>在新建的文件有两种操作：<ul>
 <li>新建一个file文件，把文件名改为/.md$/的格式；（^开头，$结尾）</li>
 <li>new-&gt;Edit File Templates,添加文件类型和后缀名，如下图<br><img src="http://p1.bqimg.com/4851/23046abea2428912.png" alt="fileType"><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3>‘#’后加空格后家的内容代表一级标题，类等于Html中的H1<br>‘##’后加空格后家的内容代表二级标题，类等于Html中的H2<br>‘###’后加空格后家的内容代表三级标题，类等于Html中的H3<br>以此类推总共六级标题，注意必须在#后跟空格。<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3></li>
@@ -108,141 +225,297 @@
 <li>无序列表：在文字前边加上‘-’或者‘<em>’即可。<em>*注意符号和文字之间都要加上一个字符的空格：</em></em><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3>在文本前边加上键盘中的大括号（&gt;）即可。<h3 id="图片和链接"><a href="#图片和链接" class="headerlink" title="图片和链接"></a>图片和链接</h3>图片和链接的语法比较相似，但是引用图片比链接多了一个！。<br>因为语法关系，利用图片举例。请看下图：<br>！<a href="http://p1.bpimg.com/4851/b78f5f3dce520c65.png" target="_blank" rel="external">fileType</a><h3 id="粗体和斜体"><a href="#粗体和斜体" class="headerlink" title="粗体和斜体"></a>粗体和斜体</h3>在两个‘<em>*’中间的内容是粗体，而在一个‘</em>’之间的内容是斜体。<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3>分割线的语法只需要在内容下边加上三个‘<em>*</em>’即可。<h3 id="引入代码"><a href="#引入代码" class="headerlink" title="引入代码"></a>引入代码</h3>在代码段上一行和下一行各加上```即可。</li>
 </ul>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/" data-id="cj2g0ei5s000100haeotrt36v" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MarkDown/">MarkDown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+        </div>
 
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-02-12T08:55:42.953Z" itemprop="dateUpdated">2017-02-12 16:55:42</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/01/21/MarkDown基本语法/" target="_blank" rel="external">http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.sugarsky.cn">
+            <img src="/img/avatar.jpg" alt="唐天来">
+            唐天来
+        </a>
     </footer>
-  </div>
-  
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MarkDown/">MarkDown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
-<nav id="article-nav">
-  
-    <a href="/2017/01/21/浅谈JavaScript中的预解释/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          浅谈JavaScript中的预解释
-        
-      </div>
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/&title=《MarkDown基本语法》 — Hello，This is TeeLay Blog&pic=http://www.sugarsky.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/&title=《MarkDown基本语法》 — Hello，This is TeeLay Blog&source=天来的秘密花园" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MarkDown基本语法》 — Hello，This is TeeLay Blog&url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/&via=http://www.sugarsky.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
     </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
   
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/21/浅谈JavaScript中的预解释/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">浅谈JavaScript中的预解释</h4>
+      </a>
+    </div>
   
-    <a href="/2017/01/20/git的基本使用简介/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">git的基本使用简介</div>
-    </a>
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/20/git的基本使用简介/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">git的基本使用简介</h4>
+      </a>
+    </div>
   
 </nav>
 
-  
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
-</section>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
         
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于生活/">关于生活</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MarkDown/">MarkDown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/WebStorm/">WebStorm</a><span class="category-list-count">1</span></li></ul></li></ul>
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/">MarkDown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WebStorm/">WebStorm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/关于生活/">关于生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li></ul>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>唐天来 &copy; 2015 - 2017</span>
+        </p>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">6</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/03/22/WebStorm快捷键总结/">WebStorm快捷键总结</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/10/正则入门/">正则入门</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/17/最近的心情/">&#39;最近的心情&#39;</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/21/浅谈JavaScript中的预解释/">浅谈JavaScript中的预解释</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/21/MarkDown基本语法/">MarkDown基本语法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 唐天来<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
 
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/&title=《MarkDown基本语法》 — Hello，This is TeeLay Blog&pic=http://www.sugarsky.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/&title=《MarkDown基本语法》 — Hello，This is TeeLay Blog&source=天来的秘密花园" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MarkDown基本语法》 — Hello，This is TeeLay Blog&url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/&via=http://www.sugarsky.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.sugarsky.cn/2017/01/21/MarkDown基本语法/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-  </div>
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3a207DMBAFwP7/TxcJ8YBUxT27Tgqxx08VpbUnSIv38njE6/m9fr9+Xa/vHn3P+FNHnz1hYWBg3JbxHK5XRrJxgqk+lDdUDAyMDRjJZkk4rsbDJBBHO2JgYGAMN0jeHf8mBgYGxtUBd3wdzNPafF8MDIw9Gb1kspfQ/nEujoGBcUNGrzHwmdeX9zcwMDD+PePZWtVLZC80F86DgYGxNCNJMmfGL3ojF8mFspBDY2BgLMqYOUpSGhsH3Lxp+ibgYmBgLMHoNSl72+ejZtWmBQYGxtqM3shXj5TvMv4HEP1NMDAwFmL0DpFf2qqJaHUsI4rTGBgYizLyclgeNPNCW/IQD5NYDAyM5RjV8lm1cJ/A8hYmBgbGzoxqCaxXVqsOT+SpMgYGxg6MaJRhIvXNH0T1DOX2AAYGxm0ZeeCbaUxe1xzFwMDYhzFzTcwvhfku+dgZBgbGDoz8EpZ8XT6uWi76T2SsGBgYd2fkLYHeltVP5QEaAwMDIy/fzxy3mrK+aWFiYGAszehd72YakCffZzEwMDZgnHX0anku2QsDAwMjv6jNF86S62ZzWgQDA2NRRm+09IpY12t8/vwEAwNjaUZ1VqGaiOblsyuGPzAwMFZiVBsAvS3zx9RMkjEwMDZg5EfMByOq7Ydq+oqBgYExc7ikJTBOSsvFOAwMDIzpwdP8KpmkxBgYGHsykiQ2L7Gd2/Is3xwxMDCWY/QaA9WQ3Wsn9EI/BgbGQowvkPy8Kv2EcZUAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
 </body>
 </html>
