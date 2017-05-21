@@ -16,6 +16,8 @@
     <title>Hello，This is TeeLay Blog | 但行好事，莫问前程。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+    <meta name="theme-color" content="#3F51B5">
+    
     
     <meta name="keywords" content="undefined">
     <meta name="description" content="天来的秘密花园">
@@ -30,8 +32,8 @@
     
         <link rel="alternate" type="application/atom+xml" title="Hello，This is TeeLay Blog" href="/atom.xml">
     
-    <link rel="shortcut icon" href="/">
-    <link rel="stylesheet" href="/css/style.css?v=1.6.7">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 </head>
 
@@ -43,19 +45,61 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap" style="background-image:url(/)">
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">唐天来</h5>
-          <a href="mailto:undefined" class="mail">
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -70,6 +114,20 @@
         </a>
         <div class="flex-col header-title ellipsis">Hello，This is TeeLay Blog</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -124,7 +182,13 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        正所谓工欲善其事必先利其器，之前在WebStorm中每...
+        正所谓工欲善其事必先利其器，之前在WebStorm中每每遇到代码量重复的内容的时候，都要使用“CV大法”，这次特地总结了WebStorm基本的快捷键，能够让编写代码来更加得心应手。
+
+Ctrl+Shift+a:快速查找使用编辑器所有功能
+
+
+左侧栏目录显影：Ctrl+Shift+F12
+文件模板配置：File》Settings》Editor&gt;File and Code Templbte...
     
 
         <a href="/2017/03/22/WebStorm快捷键总结/" class="post-more waves-effect waves-button">
@@ -216,7 +280,12 @@
     
         
                 
-         ...
+                    
+                    
+                
+                Markdown
+            
+距离正月初七已经过完好久了，这个年也算过完了。心却还停留在年假期间，迟迟找不回状态。无论是编写代码，还是看书都无法静下心来认认真真的钻研进去。身边好多朋友年后换工作...
     
 
         <a href="/2017/02/17/最近的心情/" class="post-more waves-effect waves-button">
@@ -266,7 +335,9 @@
 
     
         预解释什么是预解释，为何学预解释
-在当前作用域下，在J...
+在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行声明或定义
+带var的，只声明不定义； 带function，声明+定义；
+案例分析：12345678alert(n)    n=15;    function fn()&#123;        alert(n)        n=34;    &#125;    fn();  ...
     
 
         <a href="/2017/01/21/浅谈JavaScript中的预解释/" class="post-more waves-effect waves-button">
@@ -316,7 +387,16 @@
 
     
         编写Mark需要做的准备
-打开File-setting...
+打开File-settings-plugin;
+打开插件进行查找
+                
+                    
+                    
+                
+                plugin
+            
+重启webstrom(必须做的)
+重启webstrom之后，会在Editor-...
     
 
         <a href="/2017/01/21/MarkDown基本语法/" class="post-more waves-effect waves-button">
@@ -365,7 +445,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        自从打算开通一个github账号之后，我这个技术小白就...
+        自从打算开通一个github账号之后，我这个技术小白就打算从最基本的git语句来学习使用。记录如下git在命令行下的操作，方便以后查看使用。
+git是否安装成功通过git –version或者git -v来查看版本号，如果能找到相关版本号说明安装成功。
+git的配置12git config --global user.name "github的用户名"git config --global ...
     
 
         <a href="/2017/01/20/git的基本使用简介/" class="post-more waves-effect waves-button">
@@ -414,7 +496,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        自己研究了一上午，又是百度又是大眼瞪小眼的瞎折腾，终于...
+        自己研究了一上午，又是百度又是大眼瞪小眼的瞎折腾，终于把自己申请的域名和利用hexo和github搭建的博客绑定在了一起。都说自己上了大学以后一直都是在听别人说编程的乐趣在于你自己编写的程序成功运行的一刹那是最开心的。今天终于体验到了这种感觉，很开心，哈哈哈。
     
 
         <a href="/2017/01/20/开心，哈哈哈哈哈/" class="post-more waves-effect waves-button">
@@ -513,7 +595,11 @@
 
     
         用Hexo和GitHub搭建一个博客
-npm inst...
+npm install hexo -g
+你猜呢
+测试用的，哈哈哈哈哈
+
+
     
 
         <a href="/2017/01/19/用Hexo-Github搭建博客/" class="post-more waves-effect waves-button">
@@ -540,6 +626,15 @@ npm inst...
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
         <p>
             
@@ -551,7 +646,7 @@ npm inst...
     <div class="bottom">
         <p>
             <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>唐天来 &copy; 2017</span>
+            <span>唐天来 &copy; 2015 - 2017</span>
         </p>
     </div>
 </footer>
@@ -561,22 +656,107 @@ npm inst...
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.sugarsky.cn/&title=Hello，This is TeeLay Blog&pic=http://www.sugarsky.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.sugarsky.cn/&title=Hello，This is TeeLay Blog&source=天来的秘密花园" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.sugarsky.cn/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Hello，This is TeeLay Blog&url=http://www.sugarsky.cn/&via=http://www.sugarsky.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.sugarsky.cn/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABV0lEQVR42u3aQQ7CMAxE0d7/0mGLVNXM2AGJzM8KVaV5RUpibF+XPNbbuF+v77zfs23AgnUQa5Xj6Z76aU9XlLlgwUpm1RO499Svp7wMLFiwlCnrI3zyerBgweotfuV4hgULlsJSgmaFrl/ZFsvDgnUES8/qzD9/Jb8FC9afs5Y53DRub8CClcbSF7B+oCoFGOn5sGCFsXp/XCcFUTc0hwUrgTUvrkyi9cfvwoIVxnKbA3oL3k0Kw4KVxnIPY315109r/kKwYAWw3FjbbeAzkr+wYMEq/4L2lr29TcCCFczqNQfoIbURHMCCFclSln0zQ9wL1mHBimHNGw6Uoqb72rBgpbHcxewe3nqRpjlgwTqI1dsUlMY7ZYP4kEiCBSuM5TYcKNNs2JNgwYJlllX0ELlZ5oQFC9a4KVZP8sKClczSmwYmLQVGCgkWrDBWrxDymwIMLFgBrBeV3F7GBVFOxgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 
 </script>
 
-<script src="/js/main.min.js?v=1.6.7"></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
 
 
 
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
 
 
 
